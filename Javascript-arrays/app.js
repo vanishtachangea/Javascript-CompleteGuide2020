@@ -119,3 +119,24 @@ const taxAdjustedPrices3 = prices.map((price, index, prices)=>{
    // return taxAdjustedPrices3;
 });
 console.log(taxAdjustedPrices3);
+const sortedPrices = prices.sort();
+console.log(sortedPrices);
+const sortedPrices2 = prices.sort((a,b)=>{
+    if(a>b)
+    return 1;
+    else if (a == b)
+    return 0;
+    else 
+    return -1;
+});
+console.log(sortedPrices2);
+console.log(sortedPrices2.reverse());
+const sortedPrices3 = prices.sort((a,b)=>{
+    if(a>b)
+    return -1;
+    else if (a == b)
+    return 0;
+    else 
+    return 1;
+});
+console.log(sortedPrices3);
