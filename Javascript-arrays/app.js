@@ -89,68 +89,78 @@
 // console.log(arr7.includes("test"));
 // console.log(arr7.includes("test44"));
 
-const prices = [110.99,5.25,3.96,6.59,8.45]
-const tax = 0.05;
-const taxAdjustedPrices = [];
-console.log("prices", prices);
-for(const price of prices){
-    taxAdjustedPrices.push(price * (1 + tax));
-}
-console.log(taxAdjustedPrices);
-const taxAdjustedPrices2=[];
-prices.forEach((price, index, prices)=>{
-    const priceObj = {
-        index, 
-        price,
-        taxAdjustedPrice: price * (1 + tax)
-        }
+// const prices = [110.99,5.25,3.96,6.59,8.45]
+// const tax = 0.05;
+// const taxAdjustedPrices = [];
+// console.log("prices", prices);
+// for(const price of prices){
+//     taxAdjustedPrices.push(price * (1 + tax));
+// }
+// console.log(taxAdjustedPrices);
+// const taxAdjustedPrices2=[];
+// prices.forEach((price, index, prices)=>{
+//     const priceObj = {
+//         index, 
+//         price,
+//         taxAdjustedPrice: price * (1 + tax)
+//         }
     
-    taxAdjustedPrices2.push(priceObj);
-});
-console.log(taxAdjustedPrices2);
-//const taxAdjustedPrices3=[];
-const taxAdjustedPrices3 = prices.map((price, index, prices)=>{
-    const priceObj = {
-        index, 
-        price,
-        taxAdjustedPrice: price * (1 + tax)
-        };
+//     taxAdjustedPrices2.push(priceObj);
+// });
+// console.log(taxAdjustedPrices2);
+// //const taxAdjustedPrices3=[];
+// const taxAdjustedPrices3 = prices.map((price, index, prices)=>{
+//     const priceObj = {
+//         index, 
+//         price,
+//         taxAdjustedPrice: price * (1 + tax)
+//         };
     
-    return priceObj;
-   // return taxAdjustedPrices3;
-});
-console.log(taxAdjustedPrices3);
-const sortedPrices = prices.sort();
-console.log(sortedPrices);
-const sortedPrices2 = prices.sort((a,b)=>{
-    if(a>b)
-    return 1;
-    else if (a == b)
-    return 0;
-    else 
-    return -1;
-});
-console.log(sortedPrices2);
-console.log(sortedPrices2.reverse());
-const sortedPrices3 = prices.sort((a,b)=>{
-    if(a>b)
-    return -1;
-    else if (a == b)
-    return 0;
-    else 
-    return 1;
-});
-console.log(sortedPrices3);
+//     return priceObj;
+//    // return taxAdjustedPrices3;
+// });
+// console.log(taxAdjustedPrices3);
+// const sortedPrices = prices.sort();
+// console.log(sortedPrices);
+// const sortedPrices2 = prices.sort((a,b)=>{
+//     if(a>b)
+//     return 1;
+//     else if (a == b)
+//     return 0;
+//     else 
+//     return -1;
+// });
+// console.log(sortedPrices2);
+// console.log(sortedPrices2.reverse());
+// const sortedPrices3 = prices.sort((a,b)=>{
+//     if(a>b)
+//     return -1;
+//     else if (a == b)
+//     return 0;
+//     else 
+//     return 1;
+// });
+// console.log(sortedPrices3);
 
-const filteredArray =prices.filter((price, index, prices)=>{
-    return price >6;
-})
-console.log(filteredArray);
+// const filteredArray =prices.filter((price, index, prices)=>{
+//     return price >6;
+// })
+// console.log(filteredArray);
 
-const filteredArr2 = prices.filter(p=> p>6);
-console.log(filteredArr2);
+// const filteredArr2 = prices.filter(p=> p>6);
+// console.log(filteredArr2);
 
-const sum = prices.reduce((prevValue, currValue, curIndex, prices)=>{
- return prevValue+currValue;
-},0);
-console.log(sum);
+// const sum = prices.reduce((prevValue, currValue, curIndex, prices)=>{
+//  return prevValue+currValue;
+// },0);
+// console.log(sum);
+// const sum2 = prices.reduce(prevValue, currValue=> prevValue+currValue,0);
+// console.log(sum2);
+
+const data = 'Munich;10.99,;2000';
+const transformedData = data.split(';');
+console.log("transformedData",transformedData);
+
+const nameFragments = ['vanishta', 'changea'];
+const name = nameFragments.join(' ');
+console.log(name);
