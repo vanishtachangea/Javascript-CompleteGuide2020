@@ -157,10 +157,30 @@
 // const sum2 = prices.reduce(prevValue, currValue=> prevValue+currValue,0);
 // console.log(sum2);
 
-const data = 'Munich;10.99,;2000';
-const transformedData = data.split(';');
-console.log("transformedData",transformedData);
+// const data = 'Munich;10.99,;2000';
+// const transformedData = data.split(';');
+// console.log("transformedData",transformedData);
 
+// const nameFragments = ['vanishta', 'changea'];
+// const name = nameFragments.join(' ');
+// console.log(name);
+
+//Spread : to copy an array
 const nameFragments = ['vanishta', 'changea'];
-const name = nameFragments.join(' ');
-console.log(name);
+const copiedNameFragments =[...nameFragments, "Tom in copy"]; 
+nameFragments.push("Tom in nameFrag");
+console.log("nameFragments",nameFragments, "copiedNameFragments",copiedNameFragments);
+
+//spread is also used when you need to have a number or string inside the array but not the array
+//list of standalone values, not an array
+const prices = [10,12,9,48];
+console.log("prices", prices);
+console.log(Math.min(prices));
+console.log(Math.min(...prices));
+
+const persons = [{name:'Max', age : 30}, {name:'Jack', age : 31}];
+console.log("persons", persons);
+const copiedPersons = [...persons];
+persons.push({name:'Annabel', age : 25});
+console.log("persons", persons, "copiedPersons", copiedPersons);
+
