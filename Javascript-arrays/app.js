@@ -92,6 +92,7 @@
 const prices = [110.99,5.25,3.96,6.59,8.45]
 const tax = 0.05;
 const taxAdjustedPrices = [];
+console.log("prices", prices);
 for(const price of prices){
     taxAdjustedPrices.push(price * (1 + tax));
 }
@@ -148,3 +149,8 @@ console.log(filteredArray);
 
 const filteredArr2 = prices.filter(p=> p>6);
 console.log(filteredArr2);
+
+const sum = prices.reduce((prevValue, currValue, curIndex, prices)=>{
+ return prevValue+currValue;
+},0);
+console.log(sum);
