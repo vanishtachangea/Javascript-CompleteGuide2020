@@ -140,3 +140,11 @@ const sortedPrices3 = prices.sort((a,b)=>{
     return 1;
 });
 console.log(sortedPrices3);
+
+const filteredArray =prices.filter((price, index, prices)=>{
+    return price >6;
+})
+console.log(filteredArray);
+
+const filteredArr2 = prices.filter(p=> p>6);
+console.log(filteredArr2);
